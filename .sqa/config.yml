@@ -1,0 +1,70 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.8
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/argoeu/argo-web-api:
+      branch: devel
+      repo: https://github.com/argoeu/argo-web-api
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/argoeu/argo-web-api git:
+        commands:
+        - /usr/bin/env sh .sqa/script.skanky-pear-snake.sh
+        container: qc.acc_boozy-azure-monkey
+  QC.Doc:
+    repos:
+      github.com/argoeu/argo-web-api find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.woozy-olivine-clam.sh
+        container: qc.doc_beady-pumpkin-owl
+      github.com/argoeu/argo-web-api git:
+        commands:
+        - /usr/bin/env sh .sqa/script.jumpy-taupe-donkey.sh
+        container: qc.doc_greasy-cardinal-barracuda
+      github.com/argoeu/argo-web-api markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-cobalt-budgerigar.sh
+        container: qc.doc_skinny-olive-slug
+  QC.Lic:
+    repos:
+      github.com/argoeu/argo-web-api licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.gamy-rust-salamander.sh
+        container: qc.lic_seedy-chocolate-mau
+  QC.Sec:
+    repos:
+      github.com/argoeu/argo-web-api bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.gimpy-smalt-liger.sh
+        container: qc.sec_pretty-fuchsia-dragon
+      github.com/argoeu/argo-web-api gosec:
+        commands:
+        - /usr/bin/env sh .sqa/script.chewy-puce-catfish.sh
+        container: qc.sec_craggy-amethyst-terrier
+  QC.Sty:
+    repos:
+      github.com/argoeu/argo-web-api flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.trippy-dandelion-otter.sh
+        container: qc.sty_randy-amethyst-spitz
+      github.com/argoeu/argo-web-api jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.muggy-brass-emu.sh
+        container: qc.sty_sleepy-gold-seal
+      github.com/argoeu/argo-web-api staticcheck:
+        commands:
+        - /usr/bin/env sh .sqa/script.crabby-chocolate-foxhound.sh
+        container: qc.sty_silly-brass-zebu
+  QC.Ver:
+    repos:
+      github.com/argoeu/argo-web-api get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.lousy-purple-dodo.sh
+        container: qc.ver_cloudy-fuchsia-butterfly
+timeout: 5400
