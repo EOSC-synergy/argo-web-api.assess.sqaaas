@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/ARGOeu/argo-monitoring &&
-    mdl --json  .
+cd github.com/ARGOeu/argo-web-api &&
+    find_doc_files.py --file_type all
 )

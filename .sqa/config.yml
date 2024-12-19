@@ -1,9 +1,6 @@
 config:
   credentials: []
   project_repos:
-    github.com/ARGOeu/argo-monitoring:
-      branch: master
-      repo: https://github.com/ARGOeu/argo-monitoring
     github.com/ARGOeu/argo-web-api:
       branch: master
       repo: https://github.com/ARGOeu/argo-web-api
@@ -18,68 +15,68 @@ sqa_criteria:
     repos:
       github.com/ARGOeu/argo-web-api git:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-olive-binturong.sh
-        container: qc.acc_randy-pumpkin-okapi
+        - /usr/bin/env sh .sqa/script.stuffy-cyan-baboon.sh
+        container: qc.acc_droopy-bistre-oriole
   QC.Doc:
     repos:
-      github.com/ARGOeu/argo-monitoring find_doc_files.py:
+      github.com/ARGOeu/argo-web-api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-persimmon-otter.sh
-        container: qc.doc_woozy-viridian-deer
-      github.com/ARGOeu/argo-monitoring git:
+        - /usr/bin/env sh .sqa/script.pasty-yellow-tzu.sh
+        container: qc.doc_gloppy-sepia-wrasse
+      github.com/ARGOeu/argo-web-api git:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-bistre-tarantula.sh
-        container: qc.doc_ready-tomato-devil
-      github.com/ARGOeu/argo-monitoring markdownlint:
+        - /usr/bin/env sh .sqa/script.jumpy-razzmatazz-lizard.sh
+        container: qc.doc_flaky-crimson-capybara
+      github.com/ARGOeu/argo-web-api markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.shaggy-persimmon-birman.sh
-        container: qc.doc_stinky-cardinal-wallaby
+        - /usr/bin/env sh .sqa/script.tacky-periwinkle-olm.sh
+        container: qc.doc_slaphappy-malachite-markhor
   QC.Lic:
     repos:
       github.com/ARGOeu/argo-web-api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-magenta-chinchilla.sh
-        container: qc.lic_slaphappy-vermilion-gorilla
+        - /usr/bin/env sh .sqa/script.ugly-myrtle-quoll.sh
+        container: qc.lic_hazy-coral-otter
   QC.Met:
     repos:
       github.com/ARGOeu/argo-web-api cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-vermilion-flounder.sh
-        container: qc.met_lanky-mustard-binturong
+        - /usr/bin/env sh .sqa/script.pretty-blue-cichlid.sh
+        container: qc.met_sloppy-jade-spitz
   QC.Sec:
     repos:
       github.com/ARGOeu/argo-web-api bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-gold-lynx.sh
-        container: qc.sec_tasty-red-angora
+        - /usr/bin/env sh .sqa/script.shaky-rose-uguisu.sh
+        container: qc.sec_woolly-bronze-catfish
       github.com/ARGOeu/argo-web-api gosec:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-peach-discus.sh
-        container: qc.sec_bluesy-red-mist
+        - /usr/bin/env sh .sqa/script.ready-cobalt-pig.sh
+        container: qc.sec_pokey-cerulean-dachsbracke
   QC.Sty:
     repos:
       github.com/ARGOeu/argo-web-api flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-seashell-jaguar.sh
-        container: qc.sty_stinky-charcoal-zebra
+        - /usr/bin/env sh .sqa/script.sleepy-firebrick-lion.sh
+        container: qc.sty_greasy-vermilion-whippet
       github.com/ARGOeu/argo-web-api jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-sangria-uguisu.sh
-        container: qc.sty_skanky-mauve-monkey
+        - /usr/bin/env sh .sqa/script.foggy-auburn-magpie.sh
+        container: qc.sty_jumpy-charcoal-discus
       github.com/ARGOeu/argo-web-api staticcheck:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-scarlet-rabbit.sh
-        container: qc.sty_craggy-tomato-albatross
+        - /usr/bin/env sh .sqa/script.scaly-myrtle-badger.sh
+        container: qc.sty_tacky-khaki-dollar
   QC.Uni:
     repos:
       github.com/ARGOeu/argo-web-api pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-cornflower-gharial.sh
-        container: qc.uni_shabby-smalt-goose
+        - /usr/bin/env sh .sqa/script.snippy-orange-guppy.sh
+        container: qc.uni_snazzy-sepia-ray
   QC.Ver:
     repos:
       github.com/ARGOeu/argo-web-api get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-indigo-russel.sh
-        container: qc.ver_skimpy-rose-dugong
+        - /usr/bin/env sh .sqa/script.sickly-chocolate-wombat.sh
+        container: qc.ver_woozy-emerald-collie
 timeout: 5400
