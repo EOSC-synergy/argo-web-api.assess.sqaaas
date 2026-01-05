@@ -15,68 +15,68 @@ sqa_criteria:
     repos:
       github.com/ARGOeu/argo-web-api git:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-periwinkle-tzu.sh
-        container: qc.acc_wiggy-periwinkle-drever
+        - /usr/bin/env sh .sqa/script.slaphappy-xanthic-lizard.sh
+        container: qc.acc_slaphappy-amethyst-hippopotamus
   QC.Doc:
     repos:
       github.com/ARGOeu/argo-web-api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-green-moose.sh
-        container: qc.doc_pokey-ivory-tiger
+        - /usr/bin/env sh .sqa/script.hilly-saffron-scorpion.sh
+        container: qc.doc_fuzzy-cardinal-blue
       github.com/ARGOeu/argo-web-api git:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-cobalt-earwig.sh
-        container: qc.doc_skimpy-celadon-chamois
+        - /usr/bin/env sh .sqa/script.whiny-cornflower-slug.sh
+        container: qc.doc_cozy-tomato-harrier
       github.com/ARGOeu/argo-web-api markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-asparagus-rottweiler.sh
-        container: qc.doc_cheeky-cerise-peccary
+        - /usr/bin/env sh .sqa/script.skimpy-smalt-husky.sh
+        container: qc.doc_wiggy-chocolate-sparrow
   QC.Lic:
     repos:
       github.com/ARGOeu/argo-web-api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-saffron-birman.sh
-        container: qc.lic_slaphappy-russet-bear
+        - /usr/bin/env sh .sqa/script.snippy-amaranth-heron.sh
+        container: qc.lic_silly-pear-rabbit
   QC.Met:
     repos:
       github.com/ARGOeu/argo-web-api cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-eggplant-eagle.sh
-        container: qc.met_wimpy-cardinal-walrus
+        - /usr/bin/env sh .sqa/script.hasty-plum-beaver.sh
+        container: qc.met_craggy-tomato-camel
   QC.Sec:
     repos:
       github.com/ARGOeu/argo-web-api bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-periwinkle-falcon.sh
-        container: qc.sec_hilly-ruby-molly
+        - /usr/bin/env sh .sqa/script.gimpy-ochre-frog.sh
+        container: qc.sec_homey-bistre-wasp
       github.com/ARGOeu/argo-web-api gosec:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-cream-wombat.sh
-        container: qc.sec_cozy-puce-loon
+        - /usr/bin/env sh .sqa/script.lousy-grey-robin.sh
+        container: qc.sec_pretty-brass-binturong
   QC.Sty:
     repos:
       github.com/ARGOeu/argo-web-api flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-eggplant-magpie.sh
-        container: qc.sty_silly-salmon-butterfly
+        - /usr/bin/env sh .sqa/script.muzzy-malachite-anteater.sh
+        container: qc.sty_jumpy-pumpkin-turkey
       github.com/ARGOeu/argo-web-api jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-puce-dollar.sh
-        container: qc.sty_shabby-thistle-millipede
+        - /usr/bin/env sh .sqa/script.stealthy-orchid-hound.sh
+        container: qc.sty_paltry-periwinkle-seahorse
       github.com/ARGOeu/argo-web-api staticcheck:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-wheat-capuchin.sh
-        container: qc.sty_crabby-azure-zorse
+        - /usr/bin/env sh .sqa/script.beady-flax-dane.sh
+        container: qc.sty_silly-mustard-retriever
   QC.Uni:
     repos:
       github.com/ARGOeu/argo-web-api pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-gamboge-cheetah.sh
-        container: qc.uni_frumpy-ochre-newfoundland
+        - /usr/bin/env sh .sqa/script.leaky-maroon-hamster.sh
+        container: qc.uni_homey-gamboge-birman
   QC.Ver:
     repos:
       github.com/ARGOeu/argo-web-api get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-olivine-cheetah.sh
-        container: qc.ver_gimpy-copper-setter
+        - /usr/bin/env sh .sqa/script.grumpy-mustard-hummingbird.sh
+        container: qc.ver_sickly-scarlet-gopher
 timeout: 5400
